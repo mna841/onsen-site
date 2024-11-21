@@ -1,0 +1,809 @@
+@charset "utf-8";
+
+html {
+    font-size: 100%;
+} * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    font-family: 'Zen Kaku Gothic New' , sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+p {
+    display: block;
+}
+
+/*header {
+    width: 100%;
+    background-color: #fff;
+    padding: 0 2%;
+    display: flex;
+}*/
+
+ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    list-style: none;
+}
+
+li {
+    margin-right: 40px;
+}
+
+a {
+    text-decoration: none; /* 下線を削除 */
+    color: #fff; /* 文字色の設定 */
+    transition: color 0.3s; /* ホバー時の色変更のトランジション */
+}
+
+a:hover {
+    color: #fff; /* ホバー時の色 */
+}
+
+
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/*header*/
+
+
+#header {
+    display: flex;
+    justify-content: right;
+    text-align: right;
+    
+}
+
+
+.menu {
+    text-align: right;
+    color: #FB876E;
+}
+
+#navi {
+    display: flex;
+    text-transform: uppercase;
+    margin-top: 5px;
+    list-style: none;
+}
+
+#navi ul {
+    display: flex;
+    justify-content: center;
+}
+#navi ul li  a {
+    color: #FB876E;
+    display: block;
+    list-style-type: none;
+    text-transform: uppercase;
+    padding: 20px 35px;
+
+}
+
+#navi li a:hover {
+    color: #fff;
+    transition: all 0.3s;
+}
+
+
+.slideshow-container {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 650px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    text-align: left;
+    
+}
+
+.slideshow-container .logo {
+    margin-top: 0px;
+    line-height: 1px;
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    top: 0px;
+    left: 10px;
+    z-index: 10;
+    display: block;
+}
+
+.slideshow-container .logo img {
+    display: block;
+}
+
+
+.slideimg {
+    border-radius: 30px;
+    position: absolute;
+    width: 95%;
+    height: 95%;
+    top: 50%; /* 追加 */
+    left: 50%; /* 追加 */
+    transform: translate(-50%, -50%); /* 追加 */
+    opacity: 1;
+    background-size: cover;
+    animation: slideAnime 30s
+infinite;
+}
+
+
+/*@keyframes slideAnime {
+    0%, 30%, 100% {opacity: 0;}
+    10%, 20%  {opacity: 1;}
+}*/
+
+
+
+.slideimg:nth-of-type(1) {
+    background-image: url("../img/img/slide1.jpg");
+    /*animation-delay: 0s;*/
+}
+.slideimg:nth-of-type(2) {
+    background-image: url("../img/img/slide2.jpg");
+    /*animation-delay: 6s;*/
+}
+.slideimg:nth-of-type(3) {
+    background-image: url("../img/img/slide3.jpg");
+    /*animation-delay: 12s;*/
+}
+.slideimg:nth-of-type(4) {
+    background-image: url("../img/img/slide4.jpg");
+    /*animation-delay: 18s;*/
+}
+.slideimg:nth-of-type(5) {
+    background-image: url("../img/img/slide5.png");
+    /*animation-delay: 24s;*/
+}
+
+/* セクションタイトルのスタイル */
+
+.slideshow-container  .text {
+    text-align: left;
+    position: absolute;
+    top: 400px;
+    left: 125px;
+    
+}
+
+.text .caption {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.item-center {
+    display: flex;
+    position: relative;
+    flex-flow: row;
+    height: 300px;
+    margin: 0 0 1em;
+    align-items: center;
+}
+
+.bg-pink {
+    position: absolute;
+    border-left: 3px solid #FB876E;
+    background-color: rgb(251, 135, 109);
+    width: 3px;
+    height: 35px;
+    margin-left: 10px;
+    
+}
+
+.bg-blue {
+    position: absolute;
+    border-left: 3px solid #568CBE;
+    background-color: #568CBE;
+    width: 3px;
+    height: 35px;
+    margin-left: 10px;
+}
+
+/*見学の申し込みボタン*/
+.slideshow-container .btn {
+    font-size: 16px;
+    border: solid 1px #FB876E;
+    background-color: #FB876E;
+    color: #fff;
+    display: block;
+    margin-left: auto;
+    padding: 15px 65px;
+    transition: 0.3s;
+    border-radius: 15px;
+    position: relative;
+    top: -200px;
+    right: 0;
+}
+
+
+
+.text-sm {
+    font-size: 14px; /* 小さいテキストサイズ */
+    margin-left: 10px;
+}
+
+.text-lg {
+    font-size: 18px; /* 大きいテキストサイズ */
+    margin-left: 10px;
+}
+
+.text-xs {
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+.leading-none {
+    line-height: 1; /* 行間を狭く */
+    margin-left: 10px;
+}
+
+
+/*section-main-content*/
+
+#main-content {
+    position: relative;
+    flex-direction: column;
+    overflow: hidden;
+}
+.gallery-1{
+    display: flex;
+    position: relative;
+    margin-top: 150px;
+    
+}
+
+.gallery-1 img {
+    border-radius: 10px;
+    margin: 30px;
+    max-width: 350px;
+    height: auto;
+}
+
+.gallery-1 .gallery-1-1 {
+    /*position: absolute;*/
+    transform: translateX(-150px);
+    margin-top: 100px;
+}
+
+.gallery-1 .gallery-1-2 {
+    transform: translatex(-50px);
+    margin-bottom: 20px;
+}
+
+.gallery-1 .gallery-1-3 {
+    transform: translateX(-150px);
+}
+
+.gallery-1 .gallery-1-4 {
+    transform: translateX(-200px);
+    margin-top: 30px;
+}
+
+.main-text-title {
+    font-family: "Zen Kaku Gothic New";
+    display: flex;
+    gap: 1.5rem;
+    position: relative;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    text-align: left;
+    transform: translateX(110px);
+    margin-top: 90px;
+}
+
+.main-text-lg {
+    color: #FB876E;
+    letter-spacing: 3px;
+    font-size: 24px;
+    position: absolute;
+}
+
+.main-text-rudy {
+    letter-spacing: 3px;
+    font-size: 16px;
+    transform: translateY(3.5rem);
+    position: absolute;
+}
+.main-text-sm {
+    font-size: 16px;
+    font-family: "Zen Kaku Gothic New";
+    position: relative;
+    text-align: justify;
+    margin-left: 500px;
+    margin-bottom: 30px;
+    transform: translateY(-65px);
+    line-height: 2.5rem;
+}
+.main-text-sm ::after {
+    position: absolute;
+    font-size: 16px;
+    font-family: "Zen Kaku Gothic New";
+    text-align: justify;
+    margin-left: 500px;
+    margin-bottom: 50px;
+    transform: translateY(-90px);
+    line-height: 2.5rem;
+}
+
+
+.gallery-2 {
+    display: flex;
+    position: relative;
+    margin-top: -10px;
+    
+}
+
+.gallery-2 img {
+    border-radius: 10px;
+    margin: 30px;
+    max-width: 350px;
+    height: auto;
+}
+
+.gallery-2 .gallery-2-1 {
+    transform: translateX(-140px);
+    margin-bottom: 150px;
+}
+
+.gallery-2 .gallery-2-2 {
+    transform: translatex(-300px);
+    margin-bottom: 20px;
+}
+
+.gallery-2 .gallery-2-3 {
+    transform: translateX(-350px);
+    margin-top: 20px;
+}
+
+.gallery-2 .gallery-2-4 {
+    transform: translateX(-500px);
+    margin-top: 30px;
+}
+
+.gallery-2 .gallery-2-5 {
+    transform: translateX(-600px);
+}
+
+/*NEWS CONTENT*/
+
+#news-content {
+    background-color: #FAFAFA;
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 1000px;
+    gap: 1.5rem;
+}
+
+
+#news-content .title-h2 {
+    font-family: 'Zen Kaku Gothic New' , sans-serif;
+    font-size: 46px;
+    font-weight: 400;
+    line-height: 32px;
+    color: #FB876E;
+    top: 200px;
+    position: relative;
+}
+
+/*全ての記事を見るボタン*/
+#news-content .btn {
+    text-align: right;
+}
+
+#news-content .btn .btn-2 {
+    font-size: 16px;
+    border: solid 1px #568CBE;
+    background-color: #568CBE;
+    color: #fff;
+    margin-left: auto;
+    padding: 15px 65px;
+    transition: 0.3s;
+    border-radius: 15px;
+    top: 100px;
+    
+}
+
+.btn-news a {
+    color: #568CBE;
+}
+
+
+#news-content .news-gallery {
+    display: flex;
+    justify-content: space-between;
+    text-align: right;
+    margin-top: 300px;
+}
+
+.news-gallery img {
+    max-width: 350px;
+    height: auto;
+    list-style: none;
+    margin: 5%;
+    padding: 5%;
+    border-radius: 15%;
+    overflow: hidden;
+}
+
+.news-gallery .news-1 {
+    max-width: 350px;
+    height: auto;
+    transform: translateY(-50px);
+}
+
+.news-gallery .news-2 {
+    max-width: 350px;
+    height: auto;
+}
+
+.news-gallery .news-3 {
+    max-width: 350px;
+    height: auto;
+    transform: translateY(50px);
+}
+
+.news-gallery  .btn-news {
+    font-size: 16px;
+    border: solid 1px #568CBE;
+    background-color: #fff;
+    color: #568CBE;
+    margin-left: auto;
+    padding: 15px 65px;
+    transition: 0.3s;
+    border-radius: 15px;
+    text-align: right;
+    width: 150px;
+    white-space: nowrap;/*改行しないようにする*/
+}
+
+/*建物の説明*/
+
+#description {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    gap: 1.5rem;
+}
+
+.place-title {
+    font-family: 'Zen Kaku Gothic New' , sans-serif;
+    font-size: 46px;
+    font-weight: 400;
+    line-height: 32px;
+    color: #FB876E;
+    margin-top: 200px;
+
+}
+
+
+#description .floor-1 {
+    display: flex;
+
+}
+
+.floor-title {
+    width: 500px;
+    height: 500px;
+    line-height: 2.5rem;
+    display: inline-block;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 20px 60px 30px 0;
+    text-align: left;
+    
+}
+
+.floor-title-flex {
+    display: flex;
+    gap: 2rem;
+    border-bottom: 1px solid black;
+}
+
+.text-lg-floor {
+    font-size: 32px;
+}
+
+.text-sm-floor {
+    font-size: 16px;
+}
+
+.floor-text-main {
+    padding: 20px 60px 30px 0;
+}
+
+
+.floor-1 .floor-1-gallery {
+    text-align: right;
+    position: relative;
+    width: 600px;
+    height: 400px;
+    margin-left: 100px;
+}
+
+.floor-1 .floor-1-gallery img {
+    border-radius: 15%;
+}
+
+.floor-1-gallery ::after {
+    position: absolute;
+    text-align: right;
+    
+}
+.floor-text {
+    overflow-wrap: break-word;
+}
+/*建物2*/
+
+#description-2 {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: auto;
+    gap: 1.5rem;
+}
+#description-2 .floor-2 {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+
+.floor-title-2 {
+    width: 500px;
+    height: 500px;
+    line-height: 2.5rem;
+    display: inline-block;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 20px 0 30px 60px ;
+    text-align: left;
+    
+}
+
+.floor-2 .floor-2-gallery {
+    text-align: left;
+    position: relative;
+    width: 600px;
+    height: 400px;
+    margin-right: 100px;
+}
+
+.floor-2 .floor-2-gallery img {
+    border-radius: 15%;
+}
+
+.floor-2-gallery ::after {
+    position: absolute;
+    text-align: left;
+    
+}
+
+
+/*建物3*/
+#description-3 {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: auto;
+    gap: 1.5rem;
+}
+#description-3 .floor-3 {
+    display: flex;
+}
+
+.floor-3 .floor-3-gallery {
+    text-align: right;
+    position: relative;
+    width: 600px;
+    height: 400px;
+    margin-left: 100px;
+}
+
+.floor-3 .floor-3-gallery img {
+    border-radius: 15%;
+}
+
+.floor-3-gallery ::after {
+    position: absolute;
+    text-align: right;
+    
+}
+
+/*use 使い方*/
+
+#used {
+    width: 100%;
+    height: 1650px;
+    background-color: #568CBE;
+    border-radius: 15% 15% 0 0;
+}
+#used .title {
+    position: relative;
+}
+
+.use-title  {
+    font-family: 'Zen Kaku Gothic New' , sans-serif;
+    font-size: 46px;
+    font-weight: 400;
+    line-height: 32px;
+    color: #FB876E;
+    margin-top: 100px;
+    margin-left: 20px;
+    padding: 30px 0 0 0;
+    position: absolute;
+    
+}
+
+/*共通*/
+
+#used img {
+    width: 450px;
+    height: 300px;
+    border-radius: 15%;
+    border: #fff;
+}
+
+.content-text {
+    width: 500px;
+    height: 150px;
+    margin-top: 100px;
+    gap: 5rem;
+}
+
+.text-lg-use {
+    color: #FB876E;
+    font-size: 32px;
+    line-height: 5rem;
+}
+
+.text-sm-use {
+    font-size: 16px;
+    color: #fff;
+}
+
+/*ずれるコンテンツ*/
+
+.used-content {
+    display: flex;
+    gap: 6rem;
+    margin-top: 200px;
+    position: absolute;
+}
+
+.used-content-2{
+    display: flex;
+    gap: 6rem;
+    margin-top: 700px;
+    margin-left: 100px;
+    position: absolute;
+}
+.used-content-3 {
+    display: flex;
+    gap: 6rem;
+    margin-top: 1200px;
+    margin-left: 200px;
+    position: absolute;
+}
+
+/*ACCESS*/
+
+#access {
+    width: 100%;
+    height: 100%;
+}
+
+#access .title {
+    position: relative;
+}
+
+.access-title  {
+    font-family: 'Zen Kaku Gothic New' , sans-serif;
+    font-size: 46px;
+    font-weight: 400;
+    line-height: 32px;
+    color: #FB876E;
+    margin-top: 100px;
+    margin-left: 20px;
+    padding: 30px 0 0 0;
+    position: absolute;
+    
+}
+#access iframe {
+    margin-top: 250px;
+    margin-left: 10px;
+}
+.access-conteiner {
+    display: flex;
+}
+
+.access-text-conteiner {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    
+}
+
+.access-text {
+    width: 700px;
+    height: 150px;
+    text-align: left;
+    margin-left: 100px;
+    margin-top: 250px;
+}
+
+.access-text-1 {
+    letter-spacing: 3px;
+    font-size: 16px;
+}
+
+.access-text-2 {
+    background-color: #FAFAFA;
+    border-radius: 15%;
+    width: 700px;
+    height: 450px;
+    margin-top: 30px;
+    letter-spacing: 3px;
+    padding: 50px 40px 20px 40px;
+
+}
+.access-text-lg {
+    text-align: center;
+    font-size: 32px;
+}
+.access-text-sm {
+    margin-top: 30px;
+    font-size: 16px;
+}
+
+.btn-access {
+    font-size: 16px;
+    border: solid 1px #568CBE;
+    background-color: #fff;
+    color: #568CBE;
+    margin-left: 220px;
+    margin-top: 70px;
+    padding: 5px 5px;
+    transition: 0.3s;
+    border-radius: 15px;
+    width: 180px;
+    position: absolute;
+    text-align: center;
+}
+
+.btn-4 {
+    text-align: center;
+} 
+
+.btn-access a {
+    color: #568CBE;
+}
+
+@media (min-width: 640px) {
+    .menu  li {
+        display: inline-block;
+    }
+    
+}
